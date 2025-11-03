@@ -44,7 +44,7 @@ When loading the tenant list on the Settings page, you get the following error m
 
 The issue is due to [conditional access policy](/entra/identity/conditional-access/overview) requiring multifactor authentication (MFA) on your Azure Resource Manager app.
 
-To resolve this issue, add *Microsoft 365 Security and Compliance Center app (80ccca67-54bd-44ab-8625-4b79c4dc7775)* to the same conditional access policy as your Azure Resource Manager app. This mitigation applies MFA on the origin tenant when a user tries to sign in to the Microsoft Defender portal.
+To resolve this issue, add *Microsoft Admin Portals* app group to the same conditional access policy as your Azure Resource Manager app (e.g., _Require multifactor authentication for Azure management_). This mitigation applies MFA on the origin tenant when a user tries to sign in to the Microsoft Defender portal.
 
 Here’s an example of the policy setting in the Microsoft Entra admin center.
 
